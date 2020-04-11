@@ -31,7 +31,9 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "dist/pandemic-simulator/element.js"
+              {
+                "input": "node_modules/document-register-element/build/document-register-element.js"
+              }
             ]
           },
           "configurations": {
@@ -146,7 +148,11 @@
             "styles": [
               "projects/pandemic-simulator/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "node_modules/document-register-element/build/document-register-element.js"
+              }
+            ]
           },
           "configurations": {
             "production": {
@@ -203,6 +209,38 @@
               "projects/pandemic-simulator/tsconfig.app.json",
               "projects/pandemic-simulator/tsconfig.spec.json",
               "projects/pandemic-simulator/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "pandemic-simulator-lib": {
+      "projectType": "library",
+      "root": "projects/pandemic-simulator-lib",
+      "sourceRoot": "projects/pandemic-simulator-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/pandemic-simulator-lib/tsconfig.lib.json",
+            "project": "projects/pandemic-simulator-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pandemic-simulator-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/pandemic-simulator-lib/tsconfig.lib.json",
+              "projects/pandemic-simulator-lib/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

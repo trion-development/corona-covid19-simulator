@@ -1,23 +1,14 @@
 import { Injector, NgModule } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { ChartComponent } from './chart/chart.component';
-import { ParamsComponent } from './params/params.component';
-import { SimulationComponent } from './simulation/simulation.component';
+import { PandemicSimulatorLibModule } from 'pandemic-simulator-lib';
 
-import { SimulatorComponent } from './simulator.component';
+import { SimulatorComponent } from 'pandemic-simulator-lib';
 
 @NgModule({
-  declarations: [
-    ParamsComponent,
-    SimulatorComponent,
-    ChartComponent,
-    SimulationComponent
-  ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    PandemicSimulatorLibModule
   ]
 })
 export class AppModule {

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, NgZone, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { ChartComponent } from '../chart/chart.component';
 import { Border } from '../models/border';
 import {
@@ -56,9 +56,6 @@ export class SimulationComponent implements OnInit, AfterViewInit {
   private updateInterval: number;
   private resizeTimeout: number;
 
-  constructor(private zone: NgZone) {
-  }
-
   ngOnInit(): void {
   }
 
@@ -81,54 +78,51 @@ export class SimulationComponent implements OnInit, AfterViewInit {
   }
 
   start(): void {
+    clearInterval(this.updateInterval);
 
-    this.zone.runOutsideAngular(() => {
-      clearInterval(this.updateInterval);
+    this.chart.init(this.simulatorParams.population);
 
-      this.chart.init(this.simulatorParams.population);
+    // clean simulation states
+    this.persons = [];
+    this.currentFrame = 0;
 
-      // clean simulation states
-      this.persons = [];
-      this.currentFrame = 0;
-
-      // create sick and healthy balls
-      let ballIdx = 0;
-      while (ballIdx < 1) {
-        if (this.randomNumberGenerator) {
-          this.persons.push(new Person(Health.SICK, this.randomNumberGenerator));
-        } else {
-          this.persons.push(new Person(Health.SICK));
-        }
-        ballIdx++;
+    // create sick and healthy balls
+    let ballIdx = 0;
+    while (ballIdx < 1) {
+      if (this.randomNumberGenerator) {
+        this.persons.push(new Person(Health.SICK, this.randomNumberGenerator));
+      } else {
+        this.persons.push(new Person(Health.SICK));
       }
-      while (ballIdx < this.simulatorParams.population) {
-        if (this.randomNumberGenerator) {
-          this.persons.push(new Person(Health.HEALTHY, this.randomNumberGenerator));
-        } else {
-          this.persons.push(new Person(Health.HEALTHY));
-        }
-        ballIdx++;
+      ballIdx++;
+    }
+    while (ballIdx < this.simulatorParams.population) {
+      if (this.randomNumberGenerator) {
+        this.persons.push(new Person(Health.HEALTHY, this.randomNumberGenerator));
+      } else {
+        this.persons.push(new Person(Health.HEALTHY));
       }
+      ballIdx++;
+    }
 
-      // shuffle balls
-      this.shuffleBalls();
+    // shuffle balls
+    this.shuffleBalls();
 
-      const socialDistancingTotal = Math.floor(this.simulatorParams.population * this.simulatorParams.distancing);
-      // make socialDistancing balls
-      for (let i = 0; i < socialDistancingTotal; i++) {
-        this.persons[i].socialDistancing = true;
-      }
+    const socialDistancingTotal = Math.floor(this.simulatorParams.population * this.simulatorParams.distancing);
+    // make socialDistancing balls
+    for (let i = 0; i < socialDistancingTotal; i++) {
+      this.persons[i].socialDistancing = true;
+    }
 
-      // start chart
-      // start chart
-      this.chart.start();
+    // start chart
+    // start chart
+    this.chart.start();
 
-      // set interval
-      this.updateInterval = setInterval(
-        () => this.update(this.simulatorParams.infectionRate, this.simulatorParams.deathRate),
-        updateIntervallMs
-      );
-    });
+    // set interval
+    this.updateInterval = setInterval(
+      () => this.update(this.simulatorParams.infectionRate, this.simulatorParams.deathRate),
+      updateIntervallMs
+    );
   }
 
   private shuffleBalls(): void {

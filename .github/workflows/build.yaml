@@ -22,7 +22,7 @@ jobs:
       - name: Production-Build
         uses: docker://trion/ng-cli:latest
         with:
-          args: /bin/sh -c "npm run build:element; npm run build:page -- --base-href=${GITHUB_REPOSITORY#*/}; rm -rf node_modules; chmod -f -R a+rwx dist; true"
+          args: /bin/sh -c "npm run build:lib; npm run build:element; npm run build:page -- --base-href=${GITHUB_REPOSITORY#*/}; rm -rf node_modules; chmod -f -R a+rwx dist; true"
 
       - name: Deployment auf GitHub Pages
         env:

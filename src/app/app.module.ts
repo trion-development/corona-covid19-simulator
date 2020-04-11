@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { PandemicSimulatorLibModule } from 'pandemic-simulator-lib';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -7,12 +8,12 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    PandemicSimulatorLibModule
   ],
   bootstrap: [
     AppComponent
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  ]
 })
 export class AppModule {
 }
