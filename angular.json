@@ -228,11 +228,6 @@
           "options": {
             "tsConfig": "projects/pandemic-simulator-lib/tsconfig.lib.json",
             "project": "projects/pandemic-simulator-lib/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/pandemic-simulator-lib/tsconfig.lib.prod.json"
-            }
           }
         },
         "lint": {
