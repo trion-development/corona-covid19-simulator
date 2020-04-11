@@ -4,6 +4,13 @@
   margin: 20px auto;
 }
 
+@media screen and (max-width: 480px) {
+  .chart-container {
+    width: 250px;
+    height: 25px;
+  }
+}
+
 
 @media screen and (max-width: 1000px) {
   #chart-stats {
