@@ -1,0 +1,30 @@
+<div class="flex">
+  <div class="param-container">
+    <cosi-params [initialParams]="mainParams" (paramsChanged)="mainParams = $event"></cosi-params>
+    <div class="flex column">
+      <button class="start-button" (click)="start(simulator1)">(Re)Start Simulation</button>
+      <button class="secondary-button" (click)="show2nd(simulator2)">Show Second Simulation</button>
+    </div>
+  </div>
+  <div #simulator1 tabindex="1">
+    <cosi-simulation [simulatorParams]="mainParams"
+                     [randomNumberGenerator]="rng1">
+    </cosi-simulation>
+  </div>
+</div>
+<div class="flex" #simulator2 tabindex="1">
+  <ng-container *ngIf="is2ndVisible">
+    <div class="param-container">
+      <cosi-params [initialParams]="secondParams" (paramsChanged)="secondParams = $event"></cosi-params>
+      <div class="flex column">
+        <button class="start-button" (click)="start(simulator1)">(Re)Start Simulation</button>
+      </div>
+    </div>
+    <div>
+      <cosi-simulation [simulatorParams]="secondParams"
+                       [randomNumberGenerator]="rng2">
+      </cosi-simulation>
+    </div>
+  </ng-container>
+</div>
+

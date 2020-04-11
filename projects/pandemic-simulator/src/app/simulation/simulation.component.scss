@@ -1,0 +1,44 @@
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.secondary-button {
+  background-color: #ffffff;
+  border: 1px solid #616161;
+  color: #212121;
+  padding: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  #simulation-dimensions {
+    margin: 20px auto 0;
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 630px) {
+  #simulation-dimensions {
+    margin: 20px auto 0;
+    width: 400px;
+    height: 266px;
+  }
+}
+
+@media screen and (min-width: 631px) and (max-width: 1500px) {
+  #simulation-dimensions {
+    margin: 25px auto 0;
+    width: 600px;
+    height: 399px;
+  }
+}
+
+@media only screen and (min-width: 1501px) {
+  #simulation-dimensions {
+    margin: 30px auto 0;
+    width: 750px;
+    height: 500px;
+  }
+}

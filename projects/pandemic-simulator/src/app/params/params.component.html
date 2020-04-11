@@ -1,0 +1,18 @@
+<form [formGroup]="paramsForm">
+  <div>
+    <label for="population">Population </label>
+    <input id="population" type="range" min="100" max="500" formControlName="population">
+  </div>
+  <div>
+    <label for="distancing">Social Distancing </label>
+    <input id="distancing" type="range" min="0" max="100" formControlName="distancing">
+  </div>
+  <div>
+    <label for="deathRate">Death Rate </label>
+    <input id="deathRate" type="range" min="0" max="100" formControlName="deathRate">
+  </div>
+  <div>
+    <label for="infectionRate">Infection Rate </label>
+    <input id="infectionRate" type="range" min="0" max="100" formControlName="infectionRate">
+  </div>
+</form>

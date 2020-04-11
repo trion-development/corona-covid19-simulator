@@ -1,0 +1,32 @@
+div {
+  margin-bottom: 20px;
+}
+
+
+label {
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  input[type=range] {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 630px) {
+  input[type=range] {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 631px) and (max-width: 1500px) {
+  input[type=range] {
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 1501px) {
+  input[type=range] {
+    width: 400px;
+  }
+}

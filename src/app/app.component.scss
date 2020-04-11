@@ -1,0 +1,23 @@
+.top-menu-item {
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.faq-popover {
+  position: fixed;
+  top: 45px;
+  right: 60px;
+  left: 60px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  color: #212121;
+  padding: 30px;
+  font-weight: normal;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12);
+
+  transition: opacity 200ms ease;
+  opacity: 0;
+  overflow: hidden;
+}

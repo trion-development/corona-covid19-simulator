@@ -1,0 +1,10 @@
+<div>
+  <div class="button-container">
+    <button class="secondary-button" (click)="toggleLeftBorder()">Border Left</button>
+    <button class="secondary-button" (click)="toggleRightBorder()">Border Right</button>
+  </div>
+  <div #container id="simulation-dimensions" class="simulation-container">
+    <canvas #canvasElement></canvas>
+  </div>
+  <cosi-chart></cosi-chart>
+</div>

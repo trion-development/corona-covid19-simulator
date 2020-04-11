@@ -1,0 +1,22 @@
+<div id="chart-stats">
+  <span class="border-on-right">
+    Healthy
+    <span id="healthy-number" class="number">{{healthyAbsolute}}</span>
+  </span>
+  <span class="border-on-right">
+    Sick
+    <span id="sick-number" class="number">{{sickAbsolute}}</span>
+  </span>
+  <span class="border-on-right">
+    Recovered
+    <span id="recovered-number" class="number">{{recoveredAbsolute}}</span>
+  </span>
+  <span>
+    Dead
+    <span id="dead-number" class="number">{{deadAbsolute}}</span>
+  </span>
+</div>
+
+<div #container class="chart-container">
+  <canvas #canvasElement></canvas>
+</div>

@@ -1,0 +1,36 @@
+.chart-container {
+  width: 450px;
+  height: 45px;
+  margin: 20px auto;
+}
+
+
+@media screen and (max-width: 1000px) {
+  #chart-stats {
+    text-align: center;
+  }
+}
+
+.number, .parameters-text, .parameters-title {
+  font-weight: bold;
+}
+
+.border-on-right {
+  border-right: gray 2px solid;
+}
+
+#healthy-number {
+  color: #AED581;
+}
+
+#sick-number {
+  color: #E53935;
+}
+
+#recovered-number {
+  color: #FF9800;
+}
+
+#dead-number {
+  color: #000000;
+}
