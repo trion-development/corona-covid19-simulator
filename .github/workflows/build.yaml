@@ -11,6 +11,8 @@ jobs:
       - name: Checkout repository (all branches)
         run: |
           git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+          mkdir dist
+          chmod a+w dist
 
       - name: Clean-install dependencies
         run: |
