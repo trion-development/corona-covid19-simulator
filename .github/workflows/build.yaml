@@ -32,7 +32,7 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@example.com"
           git checkout gh-pages
           ls | grep -v dist | xargs rm -r
-          find dist -mindepth 2 -maxdepth 3 -exec mv {} . \;
+          find dist -mindepth 2 -maxdepth 2 -exec mv {} . \;
           rm -rf dist
           git add .
           git commit -m "updated GitHub Pages"
