@@ -756,7 +756,7 @@ function SimulatorComponent_ng_container_13_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(3, "div", 3);
     ɵɵelementStart(4, "button", 4);
     ɵɵlistener("click", function SimulatorComponent_ng_container_13_Template_button_click_4_listener() { ɵɵrestoreView(_r19); var ctx_r20 = ɵɵnextContext(); var _r15 = ɵɵreference(9); return ctx_r20.start(_r15); });
-    ɵɵtext(5, "(Re)Start Simulation");
+    ɵɵtext(5, "(Re)Start simulation");
     ɵɵelementEnd();
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -825,11 +825,11 @@ var SimulatorComponent = /** @class */ (function () {
             ɵɵelementStart(3, "div", 3);
             ɵɵelementStart(4, "button", 4);
             ɵɵlistener("click", function SimulatorComponent_Template_button_click_4_listener() { ɵɵrestoreView(_r21); var _r15 = ɵɵreference(9); return ctx.start(_r15); });
-            ɵɵtext(5, "(Re)Start Simulation");
+            ɵɵtext(5, "(Re)Start simulation");
             ɵɵelementEnd();
             ɵɵelementStart(6, "button", 5);
             ɵɵlistener("click", function SimulatorComponent_Template_button_click_6_listener() { ɵɵrestoreView(_r21); var _r16 = ɵɵreference(12); return ctx.show2nd(_r16); });
-            ɵɵtext(7, "Show Second Simulation");
+            ɵɵtext(7, "Toggle second simulation");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();

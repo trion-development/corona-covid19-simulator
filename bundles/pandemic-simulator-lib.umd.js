@@ -759,7 +759,7 @@
         core["ɵɵelementStart"](3, "div", 3);
         core["ɵɵelementStart"](4, "button", 4);
         core["ɵɵlistener"]("click", function SimulatorComponent_ng_container_13_Template_button_click_4_listener() { core["ɵɵrestoreView"](_r19); var ctx_r20 = core["ɵɵnextContext"](); var _r15 = core["ɵɵreference"](9); return ctx_r20.start(_r15); });
-        core["ɵɵtext"](5, "(Re)Start Simulation");
+        core["ɵɵtext"](5, "(Re)Start simulation");
         core["ɵɵelementEnd"]();
         core["ɵɵelementEnd"]();
         core["ɵɵelementEnd"]();
@@ -828,11 +828,11 @@
                 core["ɵɵelementStart"](3, "div", 3);
                 core["ɵɵelementStart"](4, "button", 4);
                 core["ɵɵlistener"]("click", function SimulatorComponent_Template_button_click_4_listener() { core["ɵɵrestoreView"](_r21); var _r15 = core["ɵɵreference"](9); return ctx.start(_r15); });
-                core["ɵɵtext"](5, "(Re)Start Simulation");
+                core["ɵɵtext"](5, "(Re)Start simulation");
                 core["ɵɵelementEnd"]();
                 core["ɵɵelementStart"](6, "button", 5);
                 core["ɵɵlistener"]("click", function SimulatorComponent_Template_button_click_6_listener() { core["ɵɵrestoreView"](_r21); var _r16 = core["ɵɵreference"](12); return ctx.show2nd(_r16); });
-                core["ɵɵtext"](7, "Show Second Simulation");
+                core["ɵɵtext"](7, "Toggle second simulation");
                 core["ɵɵelementEnd"]();
                 core["ɵɵelementEnd"]();
                 core["ɵɵelementEnd"]();
