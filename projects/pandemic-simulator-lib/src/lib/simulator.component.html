@@ -2,8 +2,8 @@
   <div class="param-container">
     <cosi-params [initialParams]="mainParams" (paramsChanged)="changeMainParams($event)"></cosi-params>
     <div class="flex column">
-      <button class="start-button" (click)="start(simulator1)">(Re)Start Simulation</button>
-      <button class="secondary-button" (click)="show2nd(simulator2)">Show Second Simulation</button>
+      <button class="start-button" (click)="start(simulator1)">(Re)Start simulation</button>
+      <button class="secondary-button" (click)="show2nd(simulator2)">Toggle second simulation</button>
     </div>
   </div>
   <div #simulator1 tabindex="1">
@@ -17,7 +17,7 @@
     <div class="param-container">
       <cosi-params [initialParams]="secondParams" (paramsChanged)="changeSecondParams($event)"></cosi-params>
       <div class="flex column">
-        <button class="start-button" (click)="start(simulator1)">(Re)Start Simulation</button>
+        <button class="start-button" (click)="start(simulator1)">(Re)Start simulation</button>
       </div>
     </div>
     <div>
