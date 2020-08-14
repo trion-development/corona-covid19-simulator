@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('seedrandom')) :
     typeof define === 'function' && define.amd ? define('pandemic-simulator-lib', ['exports', '@angular/common', '@angular/core', '@angular/forms', 'seedrandom'], factory) :
     (global = global || self, factory(global['pandemic-simulator-lib'] = {}, global.ng.common, global.ng.core, global.ng.forms, global.seedrandom));
-}(this, (function (exports, common, core, forms, seedrandom) { 'use strict';
+}(this, (function (exports, i3, i0, i1, seedrandom) { 'use strict';
 
     seedrandom = seedrandom && Object.prototype.hasOwnProperty.call(seedrandom, 'default') ? seedrandom['default'] : seedrandom;
 
@@ -166,79 +166,87 @@
             // clear canvas
             this.chartCanvas.nativeElement.width = this.chartCanvas.nativeElement.height = 0;
         };
-        ChartComponent.ɵfac = function ChartComponent_Factory(t) { return new (t || ChartComponent)(core["ɵɵdirectiveInject"](core.ChangeDetectorRef)); };
-        ChartComponent.ɵcmp = core["ɵɵdefineComponent"]({ type: ChartComponent, selectors: [["cosi-chart"]], viewQuery: function ChartComponent_Query(rf, ctx) { if (rf & 1) {
-                core["ɵɵviewQuery"](_c0, true);
-                core["ɵɵviewQuery"](_c1, true);
-            } if (rf & 2) {
-                var _t;
-                core["ɵɵqueryRefresh"](_t = core["ɵɵloadQuery"]()) && (ctx.chartCanvas = _t.first);
-                core["ɵɵqueryRefresh"](_t = core["ɵɵloadQuery"]()) && (ctx.containerElement = _t.first);
-            } }, decls: 21, vars: 4, consts: [["id", "chart-stats"], [1, "border-on-right"], ["id", "healthy-number", 1, "number"], ["id", "sick-number", 1, "number"], ["id", "recovered-number", 1, "number"], ["id", "dead-number", 1, "number"], [1, "chart-container"], ["container", ""], ["canvasElement", ""]], template: function ChartComponent_Template(rf, ctx) { if (rf & 1) {
-                core["ɵɵelementStart"](0, "div", 0);
-                core["ɵɵelementStart"](1, "span", 1);
-                core["ɵɵtext"](2, " Healthy ");
-                core["ɵɵelementStart"](3, "span", 2);
-                core["ɵɵtext"](4);
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](5, "span", 1);
-                core["ɵɵtext"](6, " Sick ");
-                core["ɵɵelementStart"](7, "span", 3);
-                core["ɵɵtext"](8);
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](9, "span", 1);
-                core["ɵɵtext"](10, " Recovered ");
-                core["ɵɵelementStart"](11, "span", 4);
-                core["ɵɵtext"](12);
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](13, "span");
-                core["ɵɵtext"](14, " Dead ");
-                core["ɵɵelementStart"](15, "span", 5);
-                core["ɵɵtext"](16);
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](17, "div", 6, 7);
-                core["ɵɵelement"](19, "canvas", null, 8);
-                core["ɵɵelementEnd"]();
-            } if (rf & 2) {
-                core["ɵɵadvance"](4);
-                core["ɵɵtextInterpolate"](ctx.healthyAbsolute);
-                core["ɵɵadvance"](4);
-                core["ɵɵtextInterpolate"](ctx.sickAbsolute);
-                core["ɵɵadvance"](4);
-                core["ɵɵtextInterpolate"](ctx.recoveredAbsolute);
-                core["ɵɵadvance"](4);
-                core["ɵɵtextInterpolate"](ctx.deadAbsolute);
-            } }, styles: [".chart-container[_ngcontent-%COMP%]{width:450px;height:45px;margin:20px auto}@media screen and (max-width:480px){.chart-container[_ngcontent-%COMP%]{width:250px;height:25px}}@media screen and (max-width:1000px){#chart-stats[_ngcontent-%COMP%]{text-align:center}}.number[_ngcontent-%COMP%], .parameters-text[_ngcontent-%COMP%], .parameters-title[_ngcontent-%COMP%]{font-weight:700}.border-on-right[_ngcontent-%COMP%]{border-right:2px solid gray}#healthy-number[_ngcontent-%COMP%]{color:#aed581}#sick-number[_ngcontent-%COMP%]{color:#e53935}#recovered-number[_ngcontent-%COMP%]{color:#ff9800}#dead-number[_ngcontent-%COMP%]{color:#000}"] });
         return ChartComponent;
     }());
-    /*@__PURE__*/ (function () { core["ɵsetClassMetadata"](ChartComponent, [{
-            type: core.Component,
-            args: [{
-                    selector: 'cosi-chart',
-                    templateUrl: './chart.component.html',
-                    styleUrls: ['./chart.component.scss']
-                }]
-        }], function () { return [{ type: core.ChangeDetectorRef }]; }, { chartCanvas: [{
-                type: core.ViewChild,
-                args: ['canvasElement']
-            }], containerElement: [{
-                type: core.ViewChild,
-                args: ['container']
-            }] }); })();
+    ChartComponent.ɵfac = function ChartComponent_Factory(t) { return new (t || ChartComponent)(i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
+    ChartComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ChartComponent, selectors: [["cosi-chart"]], viewQuery: function ChartComponent_Query(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵviewQuery(_c0, true);
+                i0.ɵɵviewQuery(_c1, true);
+            }
+            if (rf & 2) {
+                var _t;
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.chartCanvas = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.containerElement = _t.first);
+            }
+        }, decls: 21, vars: 4, consts: [["id", "chart-stats"], [1, "border-on-right"], ["id", "healthy-number", 1, "number"], ["id", "sick-number", 1, "number"], ["id", "recovered-number", 1, "number"], ["id", "dead-number", 1, "number"], [1, "chart-container"], ["container", ""], ["canvasElement", ""]], template: function ChartComponent_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "div", 0);
+                i0.ɵɵelementStart(1, "span", 1);
+                i0.ɵɵtext(2, " Healthy ");
+                i0.ɵɵelementStart(3, "span", 2);
+                i0.ɵɵtext(4);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(5, "span", 1);
+                i0.ɵɵtext(6, " Sick ");
+                i0.ɵɵelementStart(7, "span", 3);
+                i0.ɵɵtext(8);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(9, "span", 1);
+                i0.ɵɵtext(10, " Recovered ");
+                i0.ɵɵelementStart(11, "span", 4);
+                i0.ɵɵtext(12);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(13, "span");
+                i0.ɵɵtext(14, " Dead ");
+                i0.ɵɵelementStart(15, "span", 5);
+                i0.ɵɵtext(16);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(17, "div", 6, 7);
+                i0.ɵɵelement(19, "canvas", null, 8);
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵadvance(4);
+                i0.ɵɵtextInterpolate(ctx.healthyAbsolute);
+                i0.ɵɵadvance(4);
+                i0.ɵɵtextInterpolate(ctx.sickAbsolute);
+                i0.ɵɵadvance(4);
+                i0.ɵɵtextInterpolate(ctx.recoveredAbsolute);
+                i0.ɵɵadvance(4);
+                i0.ɵɵtextInterpolate(ctx.deadAbsolute);
+            }
+        }, styles: [".chart-container[_ngcontent-%COMP%]{height:45px;margin:20px auto;width:450px}@media screen and (max-width:480px){.chart-container[_ngcontent-%COMP%]{height:25px;width:250px}}@media screen and (max-width:1000px){#chart-stats[_ngcontent-%COMP%]{text-align:center}}.number[_ngcontent-%COMP%], .parameters-text[_ngcontent-%COMP%], .parameters-title[_ngcontent-%COMP%]{font-weight:700}.border-on-right[_ngcontent-%COMP%]{border-right:2px solid grey}#healthy-number[_ngcontent-%COMP%]{color:#aed581}#sick-number[_ngcontent-%COMP%]{color:#e53935}#recovered-number[_ngcontent-%COMP%]{color:#ff9800}#dead-number[_ngcontent-%COMP%]{color:#000}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ChartComponent, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cosi-chart',
+                        templateUrl: './chart.component.html',
+                        styleUrls: ['./chart.component.scss']
+                    }]
+            }], function () { return [{ type: i0.ChangeDetectorRef }]; }, { chartCanvas: [{
+                    type: i0.ViewChild,
+                    args: ['canvasElement']
+                }], containerElement: [{
+                    type: i0.ViewChild,
+                    args: ['container']
+                }] });
+    })();
 
     var ParamsComponent = /** @class */ (function () {
         function ParamsComponent() {
-            this.paramsChanged = new core.EventEmitter();
-            this.paramsForm = new forms.FormGroup({
-                population: new forms.FormControl(),
-                distancing: new forms.FormControl(),
-                infectionRate: new forms.FormControl(),
-                deathRate: new forms.FormControl()
+            this.paramsChanged = new i0.EventEmitter();
+            this.paramsForm = new i1.FormGroup({
+                population: new i1.FormControl(),
+                distancing: new i1.FormControl(),
+                infectionRate: new i1.FormControl(),
+                deathRate: new i1.FormControl()
             });
         }
         ParamsComponent.prototype.ngOnInit = function () {
@@ -265,52 +273,57 @@
         ParamsComponent.prototype.ngOnDestroy = function () {
             this.paramsSubs.unsubscribe();
         };
-        ParamsComponent.ɵfac = function ParamsComponent_Factory(t) { return new (t || ParamsComponent)(); };
-        ParamsComponent.ɵcmp = core["ɵɵdefineComponent"]({ type: ParamsComponent, selectors: [["cosi-params"]], inputs: { initialParams: "initialParams" }, outputs: { paramsChanged: "paramsChanged" }, decls: 17, vars: 1, consts: [[3, "formGroup"], ["for", "population"], ["id", "population", "type", "range", "min", "100", "max", "500", "formControlName", "population"], ["for", "distancing"], ["id", "distancing", "type", "range", "min", "0", "max", "100", "formControlName", "distancing"], ["for", "deathRate"], ["id", "deathRate", "type", "range", "min", "0", "max", "100", "formControlName", "deathRate"], ["for", "infectionRate"], ["id", "infectionRate", "type", "range", "min", "0", "max", "100", "formControlName", "infectionRate"]], template: function ParamsComponent_Template(rf, ctx) { if (rf & 1) {
-                core["ɵɵelementStart"](0, "form", 0);
-                core["ɵɵelementStart"](1, "div");
-                core["ɵɵelementStart"](2, "label", 1);
-                core["ɵɵtext"](3, "Population ");
-                core["ɵɵelementEnd"]();
-                core["ɵɵelement"](4, "input", 2);
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](5, "div");
-                core["ɵɵelementStart"](6, "label", 3);
-                core["ɵɵtext"](7, "Social Distancing ");
-                core["ɵɵelementEnd"]();
-                core["ɵɵelement"](8, "input", 4);
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](9, "div");
-                core["ɵɵelementStart"](10, "label", 5);
-                core["ɵɵtext"](11, "Death Rate ");
-                core["ɵɵelementEnd"]();
-                core["ɵɵelement"](12, "input", 6);
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](13, "div");
-                core["ɵɵelementStart"](14, "label", 7);
-                core["ɵɵtext"](15, "Infection Rate ");
-                core["ɵɵelementEnd"]();
-                core["ɵɵelement"](16, "input", 8);
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementEnd"]();
-            } if (rf & 2) {
-                core["ɵɵproperty"]("formGroup", ctx.paramsForm);
-            } }, directives: [forms["ɵangular_packages_forms_forms_y"], forms.NgControlStatusGroup, forms.FormGroupDirective, forms.RangeValueAccessor, forms.DefaultValueAccessor, forms.NgControlStatus, forms.FormControlName], styles: ["div[_ngcontent-%COMP%]{margin-bottom:20px}label[_ngcontent-%COMP%]{display:block}@media screen and (max-width:480px){input[type=range][_ngcontent-%COMP%]{width:200px}}@media screen and (min-width:481px) and (max-width:630px){input[type=range][_ngcontent-%COMP%]{width:300px}}@media screen and (min-width:631px) and (max-width:1500px){input[type=range][_ngcontent-%COMP%]{width:350px}}@media only screen and (min-width:1501px){input[type=range][_ngcontent-%COMP%]{width:400px}}"], changeDetection: 0 });
         return ParamsComponent;
     }());
-    /*@__PURE__*/ (function () { core["ɵsetClassMetadata"](ParamsComponent, [{
-            type: core.Component,
-            args: [{
-                    selector: 'cosi-params',
-                    templateUrl: './params.component.html',
-                    styleUrls: ['./params.component.scss'],
-                    changeDetection: core.ChangeDetectionStrategy.OnPush
-                }]
-        }], null, { initialParams: [{
-                type: core.Input
-            }], paramsChanged: [{
-                type: core.Output
-            }] }); })();
+    ParamsComponent.ɵfac = function ParamsComponent_Factory(t) { return new (t || ParamsComponent)(); };
+    ParamsComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ParamsComponent, selectors: [["cosi-params"]], inputs: { initialParams: "initialParams" }, outputs: { paramsChanged: "paramsChanged" }, decls: 17, vars: 1, consts: [[3, "formGroup"], ["for", "population"], ["id", "population", "type", "range", "min", "100", "max", "500", "formControlName", "population"], ["for", "distancing"], ["id", "distancing", "type", "range", "min", "0", "max", "100", "formControlName", "distancing"], ["for", "deathRate"], ["id", "deathRate", "type", "range", "min", "0", "max", "100", "formControlName", "deathRate"], ["for", "infectionRate"], ["id", "infectionRate", "type", "range", "min", "0", "max", "100", "formControlName", "infectionRate"]], template: function ParamsComponent_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "form", 0);
+                i0.ɵɵelementStart(1, "div");
+                i0.ɵɵelementStart(2, "label", 1);
+                i0.ɵɵtext(3, "Population ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(4, "input", 2);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(5, "div");
+                i0.ɵɵelementStart(6, "label", 3);
+                i0.ɵɵtext(7, "Social Distancing ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(8, "input", 4);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(9, "div");
+                i0.ɵɵelementStart(10, "label", 5);
+                i0.ɵɵtext(11, "Death Rate ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(12, "input", 6);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(13, "div");
+                i0.ɵɵelementStart(14, "label", 7);
+                i0.ɵɵtext(15, "Infection Rate ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(16, "input", 8);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵproperty("formGroup", ctx.paramsForm);
+            }
+        }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i1.RangeValueAccessor, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlName], styles: ["div[_ngcontent-%COMP%]{margin-bottom:20px}label[_ngcontent-%COMP%]{display:block}@media screen and (max-width:480px){input[type=range][_ngcontent-%COMP%]{width:200px}}@media screen and (min-width:481px) and (max-width:630px){input[type=range][_ngcontent-%COMP%]{width:300px}}@media screen and (min-width:631px) and (max-width:1500px){input[type=range][_ngcontent-%COMP%]{width:350px}}@media only screen and (min-width:1501px){input[type=range][_ngcontent-%COMP%]{width:400px}}"], changeDetection: 0 });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(ParamsComponent, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cosi-params',
+                        templateUrl: './params.component.html',
+                        styleUrls: ['./params.component.scss'],
+                        changeDetection: i0.ChangeDetectionStrategy.OnPush
+                    }]
+            }], null, { initialParams: [{
+                    type: i0.Input
+                }], paramsChanged: [{
+                    type: i0.Output
+                }] });
+    })();
 
     var Vector2D = /** @class */ (function () {
         function Vector2D(x, y) {
@@ -489,12 +502,12 @@
                 this.health = (this.rng() < deathRate) ? Health.DEAD : Health.RECOVERED;
             }
         };
-        Person.LEFT_BOUNDARY = PERSON_RADIUS;
-        Person.RIGHT_BOUNDARY = WIDTH - PERSON_RADIUS;
-        Person.TOP_BOUNDARY = PERSON_RADIUS;
-        Person.BOTTOM_BOUNDARY = HEIGHT - PERSON_RADIUS;
         return Person;
     }());
+    Person.LEFT_BOUNDARY = PERSON_RADIUS;
+    Person.RIGHT_BOUNDARY = WIDTH - PERSON_RADIUS;
+    Person.TOP_BOUNDARY = PERSON_RADIUS;
+    Person.BOTTOM_BOUNDARY = HEIGHT - PERSON_RADIUS;
 
     var _c0$1 = ["canvasElement"];
     var _c1$1 = ["container"];
@@ -697,83 +710,93 @@
             // hide(borderBtnsContainer);
             // show(simulationEndBtnsContainer);
         };
-        SimulationComponent.ɵfac = function SimulationComponent_Factory(t) { return new (t || SimulationComponent)(); };
-        SimulationComponent.ɵcmp = core["ɵɵdefineComponent"]({ type: SimulationComponent, selectors: [["cosi-simulation"]], viewQuery: function SimulationComponent_Query(rf, ctx) { if (rf & 1) {
-                core["ɵɵviewQuery"](_c0$1, true);
-                core["ɵɵviewQuery"](_c1$1, true);
-                core["ɵɵviewQuery"](ChartComponent, true);
-            } if (rf & 2) {
-                var _t;
-                core["ɵɵqueryRefresh"](_t = core["ɵɵloadQuery"]()) && (ctx.canvas = _t.first);
-                core["ɵɵqueryRefresh"](_t = core["ɵɵloadQuery"]()) && (ctx.canvasContainer = _t.first);
-                core["ɵɵqueryRefresh"](_t = core["ɵɵloadQuery"]()) && (ctx.chart = _t.first);
-            } }, inputs: { simulatorParams: "simulatorParams", randomNumberGenerator: "randomNumberGenerator" }, decls: 11, vars: 0, consts: [[1, "button-container"], [1, "secondary-button", 3, "click"], ["id", "simulation-dimensions", 1, "simulation-container"], ["container", ""], ["canvasElement", ""]], template: function SimulationComponent_Template(rf, ctx) { if (rf & 1) {
-                core["ɵɵelementStart"](0, "div");
-                core["ɵɵelementStart"](1, "div", 0);
-                core["ɵɵelementStart"](2, "button", 1);
-                core["ɵɵlistener"]("click", function SimulationComponent_Template_button_click_2_listener() { return ctx.toggleLeftBorder(); });
-                core["ɵɵtext"](3, "Border Left");
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](4, "button", 1);
-                core["ɵɵlistener"]("click", function SimulationComponent_Template_button_click_4_listener() { return ctx.toggleRightBorder(); });
-                core["ɵɵtext"](5, "Border Right");
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](6, "div", 2, 3);
-                core["ɵɵelement"](8, "canvas", null, 4);
-                core["ɵɵelementEnd"]();
-                core["ɵɵelement"](10, "cosi-chart");
-                core["ɵɵelementEnd"]();
-            } }, directives: [ChartComponent], styles: [".button-container[_ngcontent-%COMP%]{display:flex;justify-content:space-around;margin-top:20px}.secondary-button[_ngcontent-%COMP%]{background-color:#fff;border:1px solid #616161;color:#212121;padding:5px}@media screen and (max-width:480px){#simulation-dimensions[_ngcontent-%COMP%]{margin:20px auto 0;width:300px;height:200px}}@media screen and (min-width:481px) and (max-width:630px){#simulation-dimensions[_ngcontent-%COMP%]{margin:20px auto 0;width:400px;height:266px}}@media screen and (min-width:631px) and (max-width:1500px){#simulation-dimensions[_ngcontent-%COMP%]{margin:25px auto 0;width:600px;height:399px}}@media only screen and (min-width:1501px){#simulation-dimensions[_ngcontent-%COMP%]{margin:30px auto 0;width:750px;height:500px}}"] });
         return SimulationComponent;
     }());
-    /*@__PURE__*/ (function () { core["ɵsetClassMetadata"](SimulationComponent, [{
-            type: core.Component,
-            args: [{
-                    selector: 'cosi-simulation',
-                    templateUrl: './simulation.component.html',
-                    styleUrls: ['./simulation.component.scss']
-                }]
-        }], null, { canvas: [{
-                type: core.ViewChild,
-                args: ['canvasElement']
-            }], canvasContainer: [{
-                type: core.ViewChild,
-                args: ['container']
-            }], chart: [{
-                type: core.ViewChild,
-                args: [ChartComponent]
-            }], simulatorParams: [{
-                type: core.Input
-            }], randomNumberGenerator: [{
-                type: core.Input
-            }] }); })();
+    SimulationComponent.ɵfac = function SimulationComponent_Factory(t) { return new (t || SimulationComponent)(); };
+    SimulationComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SimulationComponent, selectors: [["cosi-simulation"]], viewQuery: function SimulationComponent_Query(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵviewQuery(_c0$1, true);
+                i0.ɵɵviewQuery(_c1$1, true);
+                i0.ɵɵviewQuery(ChartComponent, true);
+            }
+            if (rf & 2) {
+                var _t;
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.canvas = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.canvasContainer = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.chart = _t.first);
+            }
+        }, inputs: { simulatorParams: "simulatorParams", randomNumberGenerator: "randomNumberGenerator" }, decls: 11, vars: 0, consts: [[1, "button-container"], [1, "secondary-button", 3, "click"], ["id", "simulation-dimensions", 1, "simulation-container"], ["container", ""], ["canvasElement", ""]], template: function SimulationComponent_Template(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵelementStart(0, "div");
+                i0.ɵɵelementStart(1, "div", 0);
+                i0.ɵɵelementStart(2, "button", 1);
+                i0.ɵɵlistener("click", function SimulationComponent_Template_button_click_2_listener() { return ctx.toggleLeftBorder(); });
+                i0.ɵɵtext(3, "Border Left");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(4, "button", 1);
+                i0.ɵɵlistener("click", function SimulationComponent_Template_button_click_4_listener() { return ctx.toggleRightBorder(); });
+                i0.ɵɵtext(5, "Border Right");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "div", 2, 3);
+                i0.ɵɵelement(8, "canvas", null, 4);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(10, "cosi-chart");
+                i0.ɵɵelementEnd();
+            }
+        }, directives: [ChartComponent], styles: [".button-container[_ngcontent-%COMP%]{display:flex;justify-content:space-around;margin-top:20px}.secondary-button[_ngcontent-%COMP%]{background-color:#fff;border:1px solid #616161;color:#212121;padding:5px}@media screen and (max-width:480px){#simulation-dimensions[_ngcontent-%COMP%]{height:200px;margin:20px auto 0;width:300px}}@media screen and (min-width:481px) and (max-width:630px){#simulation-dimensions[_ngcontent-%COMP%]{height:266px;margin:20px auto 0;width:400px}}@media screen and (min-width:631px) and (max-width:1500px){#simulation-dimensions[_ngcontent-%COMP%]{height:399px;margin:25px auto 0;width:600px}}@media only screen and (min-width:1501px){#simulation-dimensions[_ngcontent-%COMP%]{height:500px;margin:30px auto 0;width:750px}}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(SimulationComponent, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cosi-simulation',
+                        templateUrl: './simulation.component.html',
+                        styleUrls: ['./simulation.component.scss']
+                    }]
+            }], null, { canvas: [{
+                    type: i0.ViewChild,
+                    args: ['canvasElement']
+                }], canvasContainer: [{
+                    type: i0.ViewChild,
+                    args: ['container']
+                }], chart: [{
+                    type: i0.ViewChild,
+                    args: [ChartComponent]
+                }], simulatorParams: [{
+                    type: i0.Input
+                }], randomNumberGenerator: [{
+                    type: i0.Input
+                }] });
+    })();
 
-    function SimulatorComponent_ng_container_13_Template(rf, ctx) { if (rf & 1) {
-        var _r19 = core["ɵɵgetCurrentView"]();
-        core["ɵɵelementContainerStart"](0);
-        core["ɵɵelementStart"](1, "div", 1);
-        core["ɵɵelementStart"](2, "cosi-params", 2);
-        core["ɵɵlistener"]("paramsChanged", function SimulatorComponent_ng_container_13_Template_cosi_params_paramsChanged_2_listener($event) { core["ɵɵrestoreView"](_r19); var ctx_r18 = core["ɵɵnextContext"](); return ctx_r18.changeSecondParams($event); });
-        core["ɵɵelementEnd"]();
-        core["ɵɵelementStart"](3, "div", 3);
-        core["ɵɵelementStart"](4, "button", 4);
-        core["ɵɵlistener"]("click", function SimulatorComponent_ng_container_13_Template_button_click_4_listener() { core["ɵɵrestoreView"](_r19); var ctx_r20 = core["ɵɵnextContext"](); var _r15 = core["ɵɵreference"](9); return ctx_r20.start(_r15); });
-        core["ɵɵtext"](5, "(Re)Start simulation");
-        core["ɵɵelementEnd"]();
-        core["ɵɵelementEnd"]();
-        core["ɵɵelementEnd"]();
-        core["ɵɵelementStart"](6, "div");
-        core["ɵɵelement"](7, "cosi-simulation", 8);
-        core["ɵɵelementEnd"]();
-        core["ɵɵelementContainerEnd"]();
-    } if (rf & 2) {
-        var ctx_r17 = core["ɵɵnextContext"]();
-        core["ɵɵadvance"](2);
-        core["ɵɵproperty"]("initialParams", ctx_r17.secondParams);
-        core["ɵɵadvance"](5);
-        core["ɵɵproperty"]("simulatorParams", ctx_r17.secondParams)("randomNumberGenerator", ctx_r17.rng2);
-    } }
+    function SimulatorComponent_ng_container_13_Template(rf, ctx) {
+        if (rf & 1) {
+            var _r4_1 = i0.ɵɵgetCurrentView();
+            i0.ɵɵelementContainerStart(0);
+            i0.ɵɵelementStart(1, "div", 1);
+            i0.ɵɵelementStart(2, "cosi-params", 2);
+            i0.ɵɵlistener("paramsChanged", function SimulatorComponent_ng_container_13_Template_cosi_params_paramsChanged_2_listener($event) { i0.ɵɵrestoreView(_r4_1); var ctx_r3 = i0.ɵɵnextContext(); return ctx_r3.changeSecondParams($event); });
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(3, "div", 3);
+            i0.ɵɵelementStart(4, "button", 4);
+            i0.ɵɵlistener("click", function SimulatorComponent_ng_container_13_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r4_1); var ctx_r5 = i0.ɵɵnextContext(); var _r0 = i0.ɵɵreference(9); return ctx_r5.start(_r0); });
+            i0.ɵɵtext(5, "(Re)Start simulation");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(6, "div");
+            i0.ɵɵelement(7, "cosi-simulation", 8);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementContainerEnd();
+        }
+        if (rf & 2) {
+            var ctx_r2 = i0.ɵɵnextContext();
+            i0.ɵɵadvance(2);
+            i0.ɵɵproperty("initialParams", ctx_r2.secondParams);
+            i0.ɵɵadvance(5);
+            i0.ɵɵproperty("simulatorParams", ctx_r2.secondParams)("randomNumberGenerator", ctx_r2.rng2);
+        }
+    }
     var SimulatorComponent = /** @class */ (function () {
         function SimulatorComponent(appRef) {
             this.appRef = appRef;
@@ -812,90 +835,110 @@
             this.secondParams = $event;
             this.appRef.tick();
         };
-        SimulatorComponent.ɵfac = function SimulatorComponent_Factory(t) { return new (t || SimulatorComponent)(core["ɵɵdirectiveInject"](core.ApplicationRef)); };
-        SimulatorComponent.ɵcmp = core["ɵɵdefineComponent"]({ type: SimulatorComponent, selectors: [["cosi-simulator"]], viewQuery: function SimulatorComponent_Query(rf, ctx) { if (rf & 1) {
-                core["ɵɵviewQuery"](SimulationComponent, true);
-            } if (rf & 2) {
-                var _t;
-                core["ɵɵqueryRefresh"](_t = core["ɵɵloadQuery"]()) && (ctx.charts = _t);
-            } }, decls: 14, vars: 4, consts: [[1, "flex"], [1, "param-container"], [3, "initialParams", "paramsChanged"], [1, "flex", "column"], [1, "start-button", 3, "click"], [1, "secondary-button", 3, "click"], ["tabindex", "1"], ["simulator1", ""], [3, "simulatorParams", "randomNumberGenerator"], ["tabindex", "1", 1, "flex"], ["simulator2", ""], [4, "ngIf"]], template: function SimulatorComponent_Template(rf, ctx) { if (rf & 1) {
-                var _r21 = core["ɵɵgetCurrentView"]();
-                core["ɵɵelementStart"](0, "div", 0);
-                core["ɵɵelementStart"](1, "div", 1);
-                core["ɵɵelementStart"](2, "cosi-params", 2);
-                core["ɵɵlistener"]("paramsChanged", function SimulatorComponent_Template_cosi_params_paramsChanged_2_listener($event) { return ctx.changeMainParams($event); });
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](3, "div", 3);
-                core["ɵɵelementStart"](4, "button", 4);
-                core["ɵɵlistener"]("click", function SimulatorComponent_Template_button_click_4_listener() { core["ɵɵrestoreView"](_r21); var _r15 = core["ɵɵreference"](9); return ctx.start(_r15); });
-                core["ɵɵtext"](5, "(Re)Start simulation");
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](6, "button", 5);
-                core["ɵɵlistener"]("click", function SimulatorComponent_Template_button_click_6_listener() { core["ɵɵrestoreView"](_r21); var _r16 = core["ɵɵreference"](12); return ctx.show2nd(_r16); });
-                core["ɵɵtext"](7, "Toggle second simulation");
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](8, "div", 6, 7);
-                core["ɵɵelement"](10, "cosi-simulation", 8);
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementEnd"]();
-                core["ɵɵelementStart"](11, "div", 9, 10);
-                core["ɵɵtemplate"](13, SimulatorComponent_ng_container_13_Template, 8, 3, "ng-container", 11);
-                core["ɵɵelementEnd"]();
-            } if (rf & 2) {
-                core["ɵɵadvance"](2);
-                core["ɵɵproperty"]("initialParams", ctx.mainParams);
-                core["ɵɵadvance"](8);
-                core["ɵɵproperty"]("simulatorParams", ctx.mainParams)("randomNumberGenerator", ctx.rng1);
-                core["ɵɵadvance"](3);
-                core["ɵɵproperty"]("ngIf", ctx.is2ndVisible);
-            } }, directives: [ParamsComponent, SimulationComponent, common.NgIf], styles: ["[_nghost-%COMP%]{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\";font-size:14px;color:#333;box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.flex[_ngcontent-%COMP%]{display:flex}.flex.column[_ngcontent-%COMP%]{flex-direction:column}.flex.column[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{margin-bottom:15px}.param-container[_ngcontent-%COMP%]{margin:79px 20px 20px}@media screen and (max-width:1000px){.flex[_ngcontent-%COMP%]{flex-direction:column}.flex[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{margin:30px}.param-container[_ngcontent-%COMP%]{display:flex;margin:20px;align-items:center;justify-content:space-around}}.start-button[_ngcontent-%COMP%]{background-color:#eef7ff;border:1px solid #1976d2;color:#093692;padding:5px}.secondary-button[_ngcontent-%COMP%]{background-color:#fff;border:1px solid #616161;color:#212121;padding:5px}"] });
         return SimulatorComponent;
     }());
-    /*@__PURE__*/ (function () { core["ɵsetClassMetadata"](SimulatorComponent, [{
-            type: core.Component,
-            args: [{
-                    selector: 'cosi-simulator',
-                    templateUrl: './simulator.component.html',
-                    styleUrls: ['./simulator.component.scss']
-                }]
-        }], function () { return [{ type: core.ApplicationRef }]; }, { charts: [{
-                type: core.ViewChildren,
-                args: [SimulationComponent]
-            }] }); })();
+    SimulatorComponent.ɵfac = function SimulatorComponent_Factory(t) { return new (t || SimulatorComponent)(i0.ɵɵdirectiveInject(i0.ApplicationRef)); };
+    SimulatorComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SimulatorComponent, selectors: [["cosi-simulator"]], viewQuery: function SimulatorComponent_Query(rf, ctx) {
+            if (rf & 1) {
+                i0.ɵɵviewQuery(SimulationComponent, true);
+            }
+            if (rf & 2) {
+                var _t;
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.charts = _t);
+            }
+        }, decls: 14, vars: 4, consts: [[1, "flex"], [1, "param-container"], [3, "initialParams", "paramsChanged"], [1, "flex", "column"], [1, "start-button", 3, "click"], [1, "secondary-button", 3, "click"], ["tabindex", "1"], ["simulator1", ""], [3, "simulatorParams", "randomNumberGenerator"], ["tabindex", "1", 1, "flex"], ["simulator2", ""], [4, "ngIf"]], template: function SimulatorComponent_Template(rf, ctx) {
+            if (rf & 1) {
+                var _r6_1 = i0.ɵɵgetCurrentView();
+                i0.ɵɵelementStart(0, "div", 0);
+                i0.ɵɵelementStart(1, "div", 1);
+                i0.ɵɵelementStart(2, "cosi-params", 2);
+                i0.ɵɵlistener("paramsChanged", function SimulatorComponent_Template_cosi_params_paramsChanged_2_listener($event) { return ctx.changeMainParams($event); });
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(3, "div", 3);
+                i0.ɵɵelementStart(4, "button", 4);
+                i0.ɵɵlistener("click", function SimulatorComponent_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r6_1); var _r0 = i0.ɵɵreference(9); return ctx.start(_r0); });
+                i0.ɵɵtext(5, "(Re)Start simulation");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "button", 5);
+                i0.ɵɵlistener("click", function SimulatorComponent_Template_button_click_6_listener() { i0.ɵɵrestoreView(_r6_1); var _r1 = i0.ɵɵreference(12); return ctx.show2nd(_r1); });
+                i0.ɵɵtext(7, "Toggle second simulation");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(8, "div", 6, 7);
+                i0.ɵɵelement(10, "cosi-simulation", 8);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(11, "div", 9, 10);
+                i0.ɵɵtemplate(13, SimulatorComponent_ng_container_13_Template, 8, 3, "ng-container", 11);
+                i0.ɵɵelementEnd();
+            }
+            if (rf & 2) {
+                i0.ɵɵadvance(2);
+                i0.ɵɵproperty("initialParams", ctx.mainParams);
+                i0.ɵɵadvance(8);
+                i0.ɵɵproperty("simulatorParams", ctx.mainParams)("randomNumberGenerator", ctx.rng1);
+                i0.ɵɵadvance(3);
+                i0.ɵɵproperty("ngIf", ctx.is2ndVisible);
+            }
+        }, directives: [ParamsComponent, SimulationComponent, i3.NgIf], styles: ["[_nghost-%COMP%]{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;box-sizing:border-box;color:#333;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:14px}.flex[_ngcontent-%COMP%]{display:flex}.flex.column[_ngcontent-%COMP%]{flex-direction:column}.flex.column[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{margin-bottom:15px}@media screen and (max-width:1000px){.flex[_ngcontent-%COMP%]{flex-direction:column}.flex[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{margin:30px}}.param-container[_ngcontent-%COMP%]{margin:79px 20px 20px}@media screen and (max-width:1000px){.param-container[_ngcontent-%COMP%]{align-items:center;display:flex;justify-content:space-around;margin:20px}}.start-button[_ngcontent-%COMP%]{background-color:#eef7ff;border:1px solid #1976d2;color:#093692;padding:5px}.secondary-button[_ngcontent-%COMP%]{background-color:#fff;border:1px solid #616161;color:#212121;padding:5px}"] });
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(SimulatorComponent, [{
+                type: i0.Component,
+                args: [{
+                        selector: 'cosi-simulator',
+                        templateUrl: './simulator.component.html',
+                        styleUrls: ['./simulator.component.scss']
+                    }]
+            }], function () { return [{ type: i0.ApplicationRef }]; }, { charts: [{
+                    type: i0.ViewChildren,
+                    args: [SimulationComponent]
+                }] });
+    })();
 
     var PandemicSimulatorLibModule = /** @class */ (function () {
         function PandemicSimulatorLibModule() {
         }
-        PandemicSimulatorLibModule.ɵmod = core["ɵɵdefineNgModule"]({ type: PandemicSimulatorLibModule });
-        PandemicSimulatorLibModule.ɵinj = core["ɵɵdefineInjector"]({ factory: function PandemicSimulatorLibModule_Factory(t) { return new (t || PandemicSimulatorLibModule)(); }, imports: [[
-                    common.CommonModule,
-                    forms.ReactiveFormsModule
-                ]] });
         return PandemicSimulatorLibModule;
     }());
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && core["ɵɵsetNgModuleScope"](PandemicSimulatorLibModule, { declarations: [ParamsComponent,
-            SimulatorComponent,
-            ChartComponent,
-            SimulationComponent], imports: [common.CommonModule,
-            forms.ReactiveFormsModule], exports: [SimulatorComponent] }); })();
-    /*@__PURE__*/ (function () { core["ɵsetClassMetadata"](PandemicSimulatorLibModule, [{
-            type: core.NgModule,
-            args: [{
-                    declarations: [
-                        ParamsComponent,
-                        SimulatorComponent,
-                        ChartComponent,
-                        SimulationComponent
-                    ],
-                    imports: [
-                        common.CommonModule,
-                        forms.ReactiveFormsModule
-                    ],
-                    exports: [SimulatorComponent]
-                }]
-        }], null, null); })();
+    PandemicSimulatorLibModule.ɵmod = i0.ɵɵdefineNgModule({ type: PandemicSimulatorLibModule });
+    PandemicSimulatorLibModule.ɵinj = i0.ɵɵdefineInjector({ factory: function PandemicSimulatorLibModule_Factory(t) { return new (t || PandemicSimulatorLibModule)(); }, imports: [[
+                i3.CommonModule,
+                i1.ReactiveFormsModule
+            ]] });
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(PandemicSimulatorLibModule, { declarations: [ParamsComponent,
+                SimulatorComponent,
+                ChartComponent,
+                SimulationComponent], imports: [i3.CommonModule,
+                i1.ReactiveFormsModule], exports: [SimulatorComponent] });
+    })();
+    /*@__PURE__*/ (function () {
+        i0.ɵsetClassMetadata(PandemicSimulatorLibModule, [{
+                type: i0.NgModule,
+                args: [{
+                        declarations: [
+                            ParamsComponent,
+                            SimulatorComponent,
+                            ChartComponent,
+                            SimulationComponent
+                        ],
+                        imports: [
+                            i3.CommonModule,
+                            i1.ReactiveFormsModule
+                        ],
+                        exports: [SimulatorComponent]
+                    }]
+            }], null, null);
+    })();
+
+    /*
+     * Public API Surface of pandemic-simulator-lib
+     */
+
+    /**
+     * Generated bundle index. Do not edit.
+     */
 
     exports.PandemicSimulatorLibModule = PandemicSimulatorLibModule;
     exports.SimulatorComponent = SimulatorComponent;

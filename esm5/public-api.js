@@ -1,6 +1,0 @@
-/*
- * Public API Surface of pandemic-simulator-lib
- */
-export * from './lib/pandemic-simulator-lib.module';
-export * from './lib/simulator.component';
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL3BhbmRlbWljLXNpbXVsYXRvci1saWIvIiwic291cmNlcyI6WyJwdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHO0FBRUgsY0FBYyxxQ0FBcUMsQ0FBQztBQUNwRCxjQUFjLDJCQUEyQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIFB1YmxpYyBBUEkgU3VyZmFjZSBvZiBwYW5kZW1pYy1zaW11bGF0b3ItbGliXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvcGFuZGVtaWMtc2ltdWxhdG9yLWxpYi5tb2R1bGUnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvc2ltdWxhdG9yLmNvbXBvbmVudCc7XG5cbiJdfQ==

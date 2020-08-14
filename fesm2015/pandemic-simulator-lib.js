@@ -210,7 +210,7 @@ ChartComponent.ɵcmp = ɵɵdefineComponent({ type: ChartComponent, selectors: [[
         ɵɵtextInterpolate(ctx.recoveredAbsolute);
         ɵɵadvance(4);
         ɵɵtextInterpolate(ctx.deadAbsolute);
-    } }, styles: [".chart-container[_ngcontent-%COMP%]{width:450px;height:45px;margin:20px auto}@media screen and (max-width:480px){.chart-container[_ngcontent-%COMP%]{width:250px;height:25px}}@media screen and (max-width:1000px){#chart-stats[_ngcontent-%COMP%]{text-align:center}}.number[_ngcontent-%COMP%], .parameters-text[_ngcontent-%COMP%], .parameters-title[_ngcontent-%COMP%]{font-weight:700}.border-on-right[_ngcontent-%COMP%]{border-right:2px solid gray}#healthy-number[_ngcontent-%COMP%]{color:#aed581}#sick-number[_ngcontent-%COMP%]{color:#e53935}#recovered-number[_ngcontent-%COMP%]{color:#ff9800}#dead-number[_ngcontent-%COMP%]{color:#000}"] });
+    } }, styles: [".chart-container[_ngcontent-%COMP%]{height:45px;margin:20px auto;width:450px}@media screen and (max-width:480px){.chart-container[_ngcontent-%COMP%]{height:25px;width:250px}}@media screen and (max-width:1000px){#chart-stats[_ngcontent-%COMP%]{text-align:center}}.number[_ngcontent-%COMP%], .parameters-text[_ngcontent-%COMP%], .parameters-title[_ngcontent-%COMP%]{font-weight:700}.border-on-right[_ngcontent-%COMP%]{border-right:2px solid grey}#healthy-number[_ngcontent-%COMP%]{color:#aed581}#sick-number[_ngcontent-%COMP%]{color:#e53935}#recovered-number[_ngcontent-%COMP%]{color:#ff9800}#dead-number[_ngcontent-%COMP%]{color:#000}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ChartComponent, [{
         type: Component,
         args: [{
@@ -712,7 +712,7 @@ SimulationComponent.ɵcmp = ɵɵdefineComponent({ type: SimulationComponent, sel
         ɵɵelementEnd();
         ɵɵelement(10, "cosi-chart");
         ɵɵelementEnd();
-    } }, directives: [ChartComponent], styles: [".button-container[_ngcontent-%COMP%]{display:flex;justify-content:space-around;margin-top:20px}.secondary-button[_ngcontent-%COMP%]{background-color:#fff;border:1px solid #616161;color:#212121;padding:5px}@media screen and (max-width:480px){#simulation-dimensions[_ngcontent-%COMP%]{margin:20px auto 0;width:300px;height:200px}}@media screen and (min-width:481px) and (max-width:630px){#simulation-dimensions[_ngcontent-%COMP%]{margin:20px auto 0;width:400px;height:266px}}@media screen and (min-width:631px) and (max-width:1500px){#simulation-dimensions[_ngcontent-%COMP%]{margin:25px auto 0;width:600px;height:399px}}@media only screen and (min-width:1501px){#simulation-dimensions[_ngcontent-%COMP%]{margin:30px auto 0;width:750px;height:500px}}"] });
+    } }, directives: [ChartComponent], styles: [".button-container[_ngcontent-%COMP%]{display:flex;justify-content:space-around;margin-top:20px}.secondary-button[_ngcontent-%COMP%]{background-color:#fff;border:1px solid #616161;color:#212121;padding:5px}@media screen and (max-width:480px){#simulation-dimensions[_ngcontent-%COMP%]{height:200px;margin:20px auto 0;width:300px}}@media screen and (min-width:481px) and (max-width:630px){#simulation-dimensions[_ngcontent-%COMP%]{height:266px;margin:20px auto 0;width:400px}}@media screen and (min-width:631px) and (max-width:1500px){#simulation-dimensions[_ngcontent-%COMP%]{height:399px;margin:25px auto 0;width:600px}}@media only screen and (min-width:1501px){#simulation-dimensions[_ngcontent-%COMP%]{height:500px;margin:30px auto 0;width:750px}}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SimulationComponent, [{
         type: Component,
         args: [{
@@ -736,15 +736,15 @@ SimulationComponent.ɵcmp = ɵɵdefineComponent({ type: SimulationComponent, sel
         }] }); })();
 
 function SimulatorComponent_ng_container_13_Template(rf, ctx) { if (rf & 1) {
-    const _r8 = ɵɵgetCurrentView();
+    const _r4 = ɵɵgetCurrentView();
     ɵɵelementContainerStart(0);
     ɵɵelementStart(1, "div", 1);
     ɵɵelementStart(2, "cosi-params", 2);
-    ɵɵlistener("paramsChanged", function SimulatorComponent_ng_container_13_Template_cosi_params_paramsChanged_2_listener($event) { ɵɵrestoreView(_r8); const ctx_r7 = ɵɵnextContext(); return ctx_r7.changeSecondParams($event); });
+    ɵɵlistener("paramsChanged", function SimulatorComponent_ng_container_13_Template_cosi_params_paramsChanged_2_listener($event) { ɵɵrestoreView(_r4); const ctx_r3 = ɵɵnextContext(); return ctx_r3.changeSecondParams($event); });
     ɵɵelementEnd();
     ɵɵelementStart(3, "div", 3);
     ɵɵelementStart(4, "button", 4);
-    ɵɵlistener("click", function SimulatorComponent_ng_container_13_Template_button_click_4_listener() { ɵɵrestoreView(_r8); const ctx_r9 = ɵɵnextContext(); const _r4 = ɵɵreference(9); return ctx_r9.start(_r4); });
+    ɵɵlistener("click", function SimulatorComponent_ng_container_13_Template_button_click_4_listener() { ɵɵrestoreView(_r4); const ctx_r5 = ɵɵnextContext(); const _r0 = ɵɵreference(9); return ctx_r5.start(_r0); });
     ɵɵtext(5, "(Re)Start simulation");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -754,11 +754,11 @@ function SimulatorComponent_ng_container_13_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementEnd();
     ɵɵelementContainerEnd();
 } if (rf & 2) {
-    const ctx_r6 = ɵɵnextContext();
+    const ctx_r2 = ɵɵnextContext();
     ɵɵadvance(2);
-    ɵɵproperty("initialParams", ctx_r6.secondParams);
+    ɵɵproperty("initialParams", ctx_r2.secondParams);
     ɵɵadvance(5);
-    ɵɵproperty("simulatorParams", ctx_r6.secondParams)("randomNumberGenerator", ctx_r6.rng2);
+    ɵɵproperty("simulatorParams", ctx_r2.secondParams)("randomNumberGenerator", ctx_r2.rng2);
 } }
 class SimulatorComponent {
     constructor(appRef) {
@@ -806,7 +806,7 @@ SimulatorComponent.ɵcmp = ɵɵdefineComponent({ type: SimulatorComponent, selec
         var _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.charts = _t);
     } }, decls: 14, vars: 4, consts: [[1, "flex"], [1, "param-container"], [3, "initialParams", "paramsChanged"], [1, "flex", "column"], [1, "start-button", 3, "click"], [1, "secondary-button", 3, "click"], ["tabindex", "1"], ["simulator1", ""], [3, "simulatorParams", "randomNumberGenerator"], ["tabindex", "1", 1, "flex"], ["simulator2", ""], [4, "ngIf"]], template: function SimulatorComponent_Template(rf, ctx) { if (rf & 1) {
-        const _r10 = ɵɵgetCurrentView();
+        const _r6 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "div", 0);
         ɵɵelementStart(1, "div", 1);
         ɵɵelementStart(2, "cosi-params", 2);
@@ -814,11 +814,11 @@ SimulatorComponent.ɵcmp = ɵɵdefineComponent({ type: SimulatorComponent, selec
         ɵɵelementEnd();
         ɵɵelementStart(3, "div", 3);
         ɵɵelementStart(4, "button", 4);
-        ɵɵlistener("click", function SimulatorComponent_Template_button_click_4_listener() { ɵɵrestoreView(_r10); const _r4 = ɵɵreference(9); return ctx.start(_r4); });
+        ɵɵlistener("click", function SimulatorComponent_Template_button_click_4_listener() { ɵɵrestoreView(_r6); const _r0 = ɵɵreference(9); return ctx.start(_r0); });
         ɵɵtext(5, "(Re)Start simulation");
         ɵɵelementEnd();
         ɵɵelementStart(6, "button", 5);
-        ɵɵlistener("click", function SimulatorComponent_Template_button_click_6_listener() { ɵɵrestoreView(_r10); const _r5 = ɵɵreference(12); return ctx.show2nd(_r5); });
+        ɵɵlistener("click", function SimulatorComponent_Template_button_click_6_listener() { ɵɵrestoreView(_r6); const _r1 = ɵɵreference(12); return ctx.show2nd(_r1); });
         ɵɵtext(7, "Toggle second simulation");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -837,7 +837,7 @@ SimulatorComponent.ɵcmp = ɵɵdefineComponent({ type: SimulatorComponent, selec
         ɵɵproperty("simulatorParams", ctx.mainParams)("randomNumberGenerator", ctx.rng1);
         ɵɵadvance(3);
         ɵɵproperty("ngIf", ctx.is2ndVisible);
-    } }, directives: [ParamsComponent, SimulationComponent, NgIf], styles: ["[_nghost-%COMP%]{font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\";font-size:14px;color:#333;box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.flex[_ngcontent-%COMP%]{display:flex}.flex.column[_ngcontent-%COMP%]{flex-direction:column}.flex.column[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{margin-bottom:15px}.param-container[_ngcontent-%COMP%]{margin:79px 20px 20px}@media screen and (max-width:1000px){.flex[_ngcontent-%COMP%]{flex-direction:column}.flex[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{margin:30px}.param-container[_ngcontent-%COMP%]{display:flex;margin:20px;align-items:center;justify-content:space-around}}.start-button[_ngcontent-%COMP%]{background-color:#eef7ff;border:1px solid #1976d2;color:#093692;padding:5px}.secondary-button[_ngcontent-%COMP%]{background-color:#fff;border:1px solid #616161;color:#212121;padding:5px}"] });
+    } }, directives: [ParamsComponent, SimulationComponent, NgIf], styles: ["[_nghost-%COMP%]{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;box-sizing:border-box;color:#333;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:14px}.flex[_ngcontent-%COMP%]{display:flex}.flex.column[_ngcontent-%COMP%]{flex-direction:column}.flex.column[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{margin-bottom:15px}@media screen and (max-width:1000px){.flex[_ngcontent-%COMP%]{flex-direction:column}.flex[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{margin:30px}}.param-container[_ngcontent-%COMP%]{margin:79px 20px 20px}@media screen and (max-width:1000px){.param-container[_ngcontent-%COMP%]{align-items:center;display:flex;justify-content:space-around;margin:20px}}.start-button[_ngcontent-%COMP%]{background-color:#eef7ff;border:1px solid #1976d2;color:#093692;padding:5px}.secondary-button[_ngcontent-%COMP%]{background-color:#fff;border:1px solid #616161;color:#212121;padding:5px}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SimulatorComponent, [{
         type: Component,
         args: [{
